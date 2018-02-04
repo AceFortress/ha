@@ -44,6 +44,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sf.ha-jdbc/ha-jdbc -->
+        <dependency>
+            <groupId>net.sf.ha-jdbc</groupId>
+            <artifactId>ha-jdbc</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -55,5 +63,11 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>jboss-maven2-release-repository</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+        </repository>
+    </repositories>
 
 </project>
