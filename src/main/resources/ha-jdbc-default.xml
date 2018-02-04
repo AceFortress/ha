@@ -4,14 +4,16 @@
     </sync>
     <sync id="diff">
         <property name="fetchSize">1000</property>
-        <property name="versionPattern">version</property>
     </sync>
     <cluster default-sync="full" dialect="h2" balancer="round-robin">
-        <database id="db2" location="jdbc:h2:tcp://35.193.184.100:9092/~/test;DB_CLOSE_ON_EXIT=FALSE" weight="1">
+        <database id="db2"
+                  location="jdbc:h2:tcp://35.193.184.100:9092/~/test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE"
+                  weight="1">
             <user>sa</user>
             <password>pass</password>
         </database>
-        <database id="db1" location="jdbc:h2:tcp://35.188.40.119:9092/~/test;DB_CLOSE_ON_EXIT=FALSE" weight="1">
+        <database id="db1" location="jdbc:h2:tcp://35.188.40.119:9092/~/test;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE"
+                  weight="1">
             <user>sa</user>
             <password>pass</password>
         </database>
